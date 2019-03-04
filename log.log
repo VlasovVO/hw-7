@@ -1,0 +1,504 @@
+Скрипт запущен Пн 04 мар 2019 13:00:08
+[root@localhost ~]# vgs
+  VG     #PV #LV #SN Attr   VSize  VFree
+  centos   1   2   0 wz--n- <9,00g    0 
+[root@localhost ~]# vgrana[K[K[Kename Vol[K[K[Kcentos OtusRoot
+  Volume group "centos" successfully renamed to "OtusRoot"
+[root@localhost ~]# vi .[K/t[Ketc/fstab 
+[1;25r[?25h[?8c[?25h[?0c[27m[24m[0m[H[J[?25l[?1c[25;1H"/etc/fstab" 11L, 465C[2;1H#
+# /etc/fstab
+# Created by anaconda on Mon Mar  4 10:40:38 2019
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /[23Cxfs     defaults[8C0 0
+UUID=c52a2911-3b9a-4712-83af-81b8662afeb6 /boot[19Cxfs     defaul[11;1Hts[8C0 0
+/dev/mapper/centos-swap swap[20Cswap    defaults[8C0 0
+[1m[34m~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [1;1H[?25h[?0c
+
+
+
+
+
+
+
+[?25l[?1c[0m[25;1H[1m-- INSERT --[0m[25;14H[K[9;1H[?25h[?0c/dev/mapper/centos[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;75H[K[9;18H[?25h[?0c[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;74H[K[9;17H[?25h[?0c[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;73H[K[9;16H[?25h[?0c[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;72H[K[9;15H[?25h[?0c[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;71H[K[9;14H[?25h[?0c[?25l[?1c-root / [22Cxfs     defaults [7C0 0[9;70H[K[9;13H[?25h[?0c[?25l[?1cO-root /[22C xfs     defaults[7C 0 0[9;14H[?25h[?0c[?25l[?1ct-root /[22C xfs     defaults[7C 0 0[9;15H[?25h[?0c[?25l[?1cu-root /[22C xfs     defaults[7C 0 0[9;16H[?25h[?0c[?25l[?1cs-root /[22C xfs     defaults[7C 0 0[9;17H[?25h[?0c[?25l[?1cR-root /[22C xfs     defaults[7C 0 0[9;18H[?25h[?0c[?25l[?1co-root /[22C xfs     defaults[7C 0 0[9;19H[?25h[?0c[?25l[?1co-root /[22C xfs     defaults[7C 0 0[9;20H[?25h[?0c[?25l[?1ct-root /[22C xfs     defaults[7C 0 0[9;21H[?25h[?0c[10;21H[12;21H[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;75H[K[12;18H[?25h[?0c[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;74H[K[12;17H[?25h[?0c[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;73H[K[12;16H[?25h[?0c[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;72H[K[12;15H[?25h[?0c[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;71H[K[12;14H[?25h[?0c[?25l[?1c-swap swap [19Cswap    defaults [7C0 0[12;70H[K[12;13H[?25h[?0c[?25l[?1cO-swap swap[19C swap    defaults[7C 0 0[12;14H[?25h[?0c[?25l[?1ct-swap swap[19C swap    defaults[7C 0 0[12;15H[?25h[?0c[?25l[?1cu-swap swap[19C swap    defaults[7C 0 0[12;16H[?25h[?0c[?25l[?1cs-swap swap[19C swap    defaults[7C 0 0[12;17H[?25h[?0c[?25l[?1cR-swap swap[19C swap    defaults[7C 0 0[12;18H[?25h[?0c[?25l[?1co-swap swap[19C swap    defaults[7C 0 0[12;19H[?25h[?0c[?25l[?1co-swap swap[19C swap    defaults[7C 0 0[12;20H[?25h[?0c[?25l[?1ct-swap swap[19C swap    defaults[7C 0 0[12;21H[?25h[?0c[25;1H[K[12;20H[?25l[?1c[?25h[?0c[?25l[?1c[55C-1 0[?25h[?0c[?25l[?1c[25;1H:[?25h[?0cwq[?25l[?1c"/etc/fstab" 11L, 470C written[?25h[?0c
+[root@localhost ~]# vi /etc/fstab [C[K[K[K[K[K[K[K/default/grub 
+[1;25r[?25h[?8c[?25h[?0c[27m[24m[0m[H[J[?25l[?1c[25;1H"/etc/default/grub" 7L, 279C[1;1HGRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap[7;2Hrhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+[1m[34m~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [1;1H[?25h[?0c
+
+
+
+
+[0mGRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centosos[?25l[?1c[25;1H[1m-- INSERT --[0m[25;13H[K[6;54H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap [7;1Hrhgb quiet"[7;12H[K[6;53H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap r[7;1Hhgb quiet"[7;11H[K[6;52H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rh[7;1Hgb quiet"[7;10H[K[6;51H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhg[7;1Hb quiet"[7;9H[K[6;50H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb[7;1H quiet"[7;8H[K[6;49H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb [7;1Hquiet"[7;7H[K[6;48H[?25h[?0c[?25l[?1cO/root rd.lvm.lv=centos/swap rhgb[7;1H quiet"[6;49H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/swap rhg[7;1Hb quiet"[6;50H[?25h[?0c[?25l[?1cu/root rd.lvm.lv=centos/swap rh[7;1Hgb quiet"[6;51H[?25h[?0c[?25l[?1cs/root rd.lvm.lv=centos/swap r[7;1Hhgb quiet"[6;52H[?25h[?0c[?25l[?1cR/root rd.lvm.lv=centos/swap [7;1Hrhgb quiet"[6;53H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/swap[7;1H rhgb quiet"[6;54H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/swa[7;1Hp rhgb quiet"[6;55H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/sw[7;1Hap rhgb quiet"[6;56H[?25h[?0c/root rd.lvm.lv=centos[?25l[?1c/swa[7;1Hp rhgb quiet"[7;14H[K[6;77H[?25h[?0c[?25l[?1c/swap[7;1H rhgb quiet"[7;13H[K[6;76H[?25h[?0c[?25l[?1c/swap [7;1Hrhgb quiet"[7;12H[K[6;75H[?25h[?0c[?25l[?1c/swap r[7;1Hhgb quiet"[7;11H[K[6;74H[?25h[?0c[?25l[?1c/swap rh[7;1Hgb quiet"[7;10H[K[6;73H[?25h[?0c[?25l[?1c/swap rhg[7;1Hb quiet"[7;9H[K[6;72H[?25h[?0c[?25l[?1cO/swap rh[7;1Hgb quiet"[6;73H[?25h[?0c[?25l[?1ct/swap r[7;1Hhgb quiet"[6;74H[?25h[?0c[?25l[?1cu/swap [7;1Hrhgb quiet"[6;75H[?25h[?0c[?25l[?1cs/swap[7;1H rhgb quiet"[6;76H[?25h[?0c[?25l[?1cR/swa[7;1Hp rhgb quiet"[6;77H[?25h[?0c[?25l[?1co/sw[7;1Hap rhgb quiet"[6;78H[?25h[?0c[?25l[?1co/s[7;1Hwap rhgb quiet"[6;79H[?25h[?0c[?25l[?1ct/[7;1Hswap rhgb quiet"[6;80H[?25h[?0c[25;1H[K[6;79H[?25l[?1c[?25h[?0c[?25l[?1c[25;1H:[?25h[?0cwq[?25l[?1c"/etc/default/grub" 7L, 283C written[?25h[?0c
+[root@localhost ~]# vi /etc/default/grub [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kboot/grub2/grub.cfg [K
+[1;25r[?25h[?8c[?25h[?0c[27m[24m[0m[H[J[?25l[?1c[25;1H"/boot/grub2/grub.cfg" 141L, 4287C[1;1H#
+# DO NOT EDIT THIS FILE
+#
+# It is automatically generated by grub2-mkconfig using templates
+# from /etc/grub.d and settings from /etc/default/grub
+#
+
+### BEGIN /etc/grub.d/00_header ###
+set pager=1
+
+if [ -s $prefix/grubenv ]; then
+  load_env
+fi
+if [ "${next_entry}" ] ; then
+   set default="${next_entry}"
+   set next_entry=
+   save_env next_entry
+   set boot_once=true
+else
+   set default="${saved_entry}"
+fi
+
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"[1;1H[?25h[?0c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Helse[25;1H[K[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hmenuentry_id_option=""[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hexport menuentry_id_option[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hif [ "${prev_saved_entry}" ]; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset saved_entry="${prev_saved_entry}"[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hsave_env saved_entry[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset prev_saved_entry=[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hsave_env prev_saved_entry[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset boot_once=true[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfunction savedefault {[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hif [ -z "${boot_once}" ]; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hsaved_entry="${chosen}"[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hsave_env saved_entry[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H}[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfunction load_video {[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hif [ x$feature_all_video_module = xy ]; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod all_video[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Helse[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod efi_gop[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod efi_uga[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod ieee1275_fb[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod vbe[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod vga[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod video_bochs[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hinsmod video_cirrus[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H}[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hterminal_output console[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hif [ x$feature_timeout_style = xy ] ; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset timeout_style=menu[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset timeout=5[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H# Fallback normal timeout code in case the timeout_style feature is[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H# unavailable.[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Helse[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hset timeout=5[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/00_header ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/00_tuned ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hset tuned_params=""[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hset tuned_initrd=""[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/00_tuned ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/01_users ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hif [ -f ${prefix}/user.cfg ]; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hsource ${prefix}/user.cfg[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hif [ -n "${GRUB2_PASSWORD}" ]; then[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hset superusers="root"[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hexport superusers[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;5Hpassword_pbkdf2 root ${GRUB2_PASSWORD}[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/01_users ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/10_linux ###[?25h[?0c[?25l[?1c[1;24r[1;1H[3M[1;25r[22;1Hmenuentry 'CentOS Linux (3.10.0-957.el7.x86_64) 7 (Core)' --class centos --class[23;2Hgnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-[24;1H3.10.0-957.el7.x86_64-advanced-c66b7782-0ff4-4cb7-9348-a513a850564f' {[22;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hload_video[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hset gfxpayload=keep[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod gzio[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod part_msdos[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod xfs[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hset root='hd0,msdos1'[24;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hif [ x$feature_platform_search_hint = xy ]; then[24;8H[?25h[?0c[?25l[?1c[1;24r[1;1H[3M[1;25r[22;11Hsearch --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos1 --hint-[23;1Hefi=hd0,msdos1 --hint-baremetal=ahci0,msdos1 --hint='hd0,msdos1'  c52a2911-3b9a-[24;1H4712-83af-81b8662afeb6[22;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Helse[?25h[?0c[?25l[?1c[1;24r[1;1H[2M[1;25r[23;11Hsearch --no-floppy --fs-uuid --set=root c52a2911-3b9a-4712-83af-81b866[24;1H2afeb6[23;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hfi[?25h[?0c[?25l[?1c[1;24r[1;1H[3M[1;25r[22;9Hlinux16 /vmlinuz-3.10.0-957.el7.x86_64 root=/dev/mapper/centos-root ro c[23;1Hrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_R[24;1HU.UTF-8[22;8H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinitrd16 /initramfs-3.10.0-957.el7.x86_64.img[24;8H[?25h[?0c[21;8H linux16 /vmlinuz-3.10.0-957.el7.x86_64 root=/dev/mapper/centos-s[?25l[?1c[25;1H[1m-- INSERT --[21;71H[?25h[?0c[?25l[?1c[0m-root ro cr[22;1Hashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[23;7H[K[21;70H[?25h[?0c[?25l[?1c-root ro cra[22;1Hshkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.[23;1HUTF-8[23;6H[K[21;69H[?25h[?0c[?25l[?1c-root ro cras[22;1Hhkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.U[23;1HTF-8[23;5H[K[21;68H[?25h[?0c[?25l[?1c-root ro crash[22;1Hkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UT[23;1HF-8[23;4H[K[21;67H[?25h[?0c[?25l[?1c-root ro crashk[22;1Hernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UTF[23;1H-8[23;3H[K[21;66H[?25h[?0c[?25l[?1c-root ro crashke[22;1Hrnel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UTF-[23;1H8[23;2H[K[21;65H[?25h[?0c[?25l[?1cO-root ro crashk[22;1Hernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UTF[23;1H-8[21;66H[?25h[?0c[?25l[?1ct-root ro crash[22;1Hkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UT[23;1HF-8[21;67H[?25h[?0c[?25l[?1cu-root ro cras[22;1Hhkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.U[23;1HTF-8[21;68H[?25h[?0c[?25l[?1cs-root ro cra[22;1Hshkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.[23;1HUTF-8[21;69H[?25h[?0c[?25l[?1cR-root ro cr[22;1Hashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[21;70H[?25h[?0c[?25l[?1co-root ro c[22;1Hrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_R[23;1HU.UTF-8[21;71H[?25h[?0c[?25l[?1co-root ro [22;1Hcrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_[23;1HRU.UTF-8[21;72H[?25h[?0c[?25l[?1ct-root ro[22;1H crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru[23;1H_RU.UTF-8[21;73H[?25h[?0c-root r
+ crashkernel=auto rd.lvm.lv=centos[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_[23;1HRU.UTF-8[23;9H[K[22;34H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_R[23;1HU.UTF-8[23;8H[K[22;33H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[23;7H[K[22;32H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.[23;1HUTF-8[23;6H[K[22;31H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.U[23;1HTF-8[23;5H[K[22;30H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.UT[23;1HF-8[23;4H[K[22;29H[?25h[?0c[?25l[?1cO/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.U[23;1HTF-8[22;30H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU.[23;1HUTF-8[22;31H[?25h[?0c[?25l[?1cu/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[22;32H[?25h[?0c[?25l[?1cs/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_R[23;1HU.UTF-8[22;33H[?25h[?0c[?25l[?1cR/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru_[23;1HRU.UTF-8[22;34H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/swap rhgb quiet LANG=ru[23;1H_RU.UTF-8[22;35H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/swap rhgb quiet LANG=r[23;1Hu_RU.UTF-8[22;36H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/swap rhgb quiet LANG=[23;1Hru_RU.UTF-8[22;37H[?25h[?0c/root rd.lvm.lv=centos[?25l[?1c/swap rhgb quiet LANG=r[23;1Hu_RU.UTF-8[23;11H[K[22;58H[?25h[?0c[?25l[?1c/swap rhgb quiet LANG=ru[23;1H_RU.UTF-8[23;10H[K[22;57H[?25h[?0c[?25l[?1c/swap rhgb quiet LANG=ru_[23;1HRU.UTF-8[23;9H[K[22;56H[?25h[?0c[?25l[?1c/swap rhgb quiet LANG=ru_R[23;1HU.UTF-8[23;8H[K[22;55H[?25h[?0c[?25l[?1c/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[23;7H[K[22;54H[?25h[?0c[?25l[?1c/swap rhgb quiet LANG=ru_RU.[23;1HUTF-8[23;6H[K[22;53H[?25h[?0c[?25l[?1cO/swap rhgb quiet LANG=ru_RU[23;1H.UTF-8[22;54H[?25h[?0c[?25l[?1ct/swap rhgb quiet LANG=ru_R[23;1HU.UTF-8[22;55H[?25h[?0c[?25l[?1cu/swap rhgb quiet LANG=ru_[23;1HRU.UTF-8[22;56H[?25h[?0c[?25l[?1cs/swap rhgb quiet LANG=ru[23;1H_RU.UTF-8[22;57H[?25h[?0c[?25l[?1cR/swap rhgb quiet LANG=r[23;1Hu_RU.UTF-8[22;58H[?25h[?0c[?25l[?1co/swap rhgb quiet LANG=[23;1Hru_RU.UTF-8[22;59H[?25h[?0c[?25l[?1co/swap rhgb quiet LANG[23;1H=ru_RU.UTF-8[22;60H[?25h[?0c[?25l[?1ct/swap rhgb quiet LAN[23;1HG=ru_RU.UTF-8[22;61H[?25h[?0c[24;54H[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H}[?25h[?0c[?25l[?1c[1;24r[1;1H[5M[1;25r[20;1Hmenuentry 'CentOS Linux (0-rescue-cee851d36f21434bb5b4b722f70d9423) 7 (Core)' --[21;1Hclass centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_[22;1Hid_option 'gnulinux-0-rescue-cee851d36f21434bb5b4b722f70d9423-advanced-c66b7782-[23;1H0ff4-4cb7-9348-a513a850564f' {[24;9Hload_video[21;61H[?25h[?0c[24;19H[21;61H[19;2H[21;61H[24;19H[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod gzio[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod part_msdos[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hinsmod xfs[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hset root='hd0,msdos1'[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;9Hif [ x$feature_platform_search_hint = xy ]; then[?25h[?0c[?25l[?1c[1;24r[1;1H[5M[1;25r[20;11Hsearch --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos1 --hint-[21;1Hefi=hd0,msdos1 --hint-baremetal=ahci0,msdos1 --hint='hd0,msdos1'  c52a2911-3b9a-[22;1H4712-83af-81b8662afeb6[23;9Helse[24;11Hsearch --no-floppy --fs-uuid --set=root c52a2911-3b9a-4712-83af-81b866[24;1H[1m[34m@                                                                               [21;61H[?25h[?0c[23;13H[?25l[?1c[1;24r[0m[24;1H
+[1;25r[23;1H          search --no-floppy --fs-uuid --set=root c52a2911-3b9a-4712-83af-81b866[24;1H2afeb6[?25h[?0c[?25l[?1c[1;24r[1;1H[2M[1;25r[23;9Hfi[24;9Hlinux16 /vmlinuz-0-rescue-cee851d36f21434bb5b4b722f70d9423 root=/dev/map[24;1H[1m[34m@                                                                               [23;11H[?25h[?0c[?25l[?1c[1;24r[0m[1;1H[4M[1;25r[20;1H        linux16 /vmlinuz-0-rescue-cee851d36f21434bb5b4b722f70d9423 root=/dev/map[21;1Hper/centos-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap
+rhgb quiet[23;9Hinitrd16 /initramfs-0-rescue-cee851d36f21434bb5b4b722f70d9423.img
+}[21;61H[?25h[?0c[23;74H[21;61H[19;11H[21;61Hcens[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap r[22;1Hhgb quiet[22;10H[K[21;10H[?25h[?0c[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rh[22;1Hgb quiet[22;9H[K[21;9H[?25h[?0c[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhg[22;1Hb quiet[22;8H[K[21;8H[?25h[?0c[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb[22;1H quiet[22;7H[K[21;7H[?25h[?0c[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb [22;1Hquiet[22;6H[K[21;6H[?25h[?0c[?25l[?1c-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb q[22;1Huiet[22;5H[K[21;5H[?25h[?0c[?25l[?1cO-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb [22;1Hquiet[21;6H[?25h[?0c[?25l[?1ct-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb[22;1H quiet[21;7H[?25h[?0c[?25l[?1cu-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhg[22;1Hb quiet[21;8H[?25h[?0c[?25l[?1cs-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rh[22;1Hgb quiet[21;9H[?25h[?0c[?25l[?1cR-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap r[22;1Hhgb quiet[21;10H[?25h[?0c[?25l[?1co-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap [22;1Hrhgb quiet[21;11H[?25h[?0c[?25l[?1co-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap[22;1H rhgb quiet[21;12H[?25h[?0c[?25l[?1ct-root ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swa[22;1Hp rhgb quiet[21;13H[?25h[?0c-root ro crashkernel=auto rd.lvm.lv=centos[?25l[?1c/root rd.lvm.lv=centos/swap[22;1H rhgb quiet[22;12H[K[21;54H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap [22;1Hrhgb quiet[22;11H[K[21;53H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap r[22;1Hhgb quiet[22;10H[K[21;52H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rh[22;1Hgb quiet[22;9H[K[21;51H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhg[22;1Hb quiet[22;8H[K[21;50H[?25h[?0c[?25l[?1c/root rd.lvm.lv=centos/swap rhgb[22;1H quiet[22;7H[K[21;49H[?25h[?0c[?25l[?1cO/root rd.lvm.lv=centos/swap rhg[22;1Hb quiet[21;50H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/swap rh[22;1Hgb quiet[21;51H[?25h[?0c[?25l[?1cu/root rd.lvm.lv=centos/swap r[22;1Hhgb quiet[21;52H[?25h[?0c[?25l[?1cs/root rd.lvm.lv=centos/swap [22;1Hrhgb quiet[21;53H[?25h[?0c[?25l[?1cR/root rd.lvm.lv=centos/swap[22;1H rhgb quiet[21;54H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/swa[22;1Hp rhgb quiet[21;55H[?25h[?0c[?25l[?1co/root rd.lvm.lv=centos/sw[22;1Hap rhgb quiet[21;56H[?25h[?0c[?25l[?1ct/root rd.lvm.lv=centos/s[22;1Hwap rhgb quiet[21;57H[?25h[?0c/root rd.lvm.lv=centos[?25l[?1c/sw[22;1Hap rhgb quiet[22;14H[K[21;78H[?25h[?0c[?25l[?1c/swa[22;1Hp rhgb quiet[22;13H[K[21;77H[?25h[?0c[?25l[?1c/swap[22;1H rhgb quiet[22;12H[K[21;76H[?25h[?0c[?25l[?1c/swap [22;1Hrhgb quiet[22;11H[K[21;75H[?25h[?0c[?25l[?1c/swap r[22;1Hhgb quiet[22;10H[K[21;74H[?25h[?0c[?25l[?1c/swap rh[22;1Hgb quiet[22;9H[K[21;73H[?25h[?0c[?25l[?1cO/swap r[22;1Hhgb quiet[21;74H[?25h[?0c[?25l[?1ct/swap [22;1Hrhgb quiet[21;75H[?25h[?0c[?25l[?1cu/swap[22;1H rhgb quiet[21;76H[?25h[?0c[?25l[?1cs/swa[22;1Hp rhgb quiet[21;77H[?25h[?0c[?25l[?1cR/sw[22;1Hap rhgb quiet[21;78H[?25h[?0c[?25l[?1co/s[22;1Hwap rhgb quiet[21;79H[?25h[?0c[?25l[?1co/[22;1Hswap rhgb quiet[21;80H[?25h[?0c[?25l[?1ct[22;1H/swap rhgb quiet[?25h[?0c[23;74H
+}[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/10_linux ###[?25h[?0c[?25l[?1c[1;24r[1;1H[4M[1;25r[22;1H### BEGIN /etc/grub.d/20_linux_xen ###
+### END /etc/grub.d/20_linux_xen ###[21;1H[?25h[?0c[22;39H[23;37H
+[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/20_ppc_terminfo ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/20_ppc_terminfo ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/30_os-prober ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/30_os-prober ###[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H[?25h[?0c[?25l[?1c[1;24r[1;1H[3M[1;25r[22;1H### BEGIN /etc/grub.d/40_custom ###
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change[22;36H[?25h[?0c[23;78H[24;77H[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H# the 'exec tail' line above.[?25h[?0c[?25l[?1c[1;24r[1;1H[2M[1;25r[23;1H### END /etc/grub.d/40_custom ###[?25h[?0c
+[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### BEGIN /etc/grub.d/41_custom ###[?25h[?0c[?25l[?1c[1;24r[1;1H[3M[1;25r[22;1Hif [ -f  ${config_directory}/custom.cfg ]; then
+  source ${config_directory}/custom.cfg
+elif [ -z "${config_directory}" -a -f  $prefix/custom.cfg ]; then[22;48H[?25h[?0c[23;40H[24;66H[?25l[?1c[1;24r[24;1H
+[1;25r[24;3Hsource $prefix/custom.cfg;[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1Hfi[?25h[?0c[?25l[?1c[1;24r[24;1H
+[1;25r[24;1H### END /etc/grub.d/41_custom ###[?25h[?0c[25;1H[K[24;33H[?25l[?1c[?25h[?0c[?25l[?1c
+:[?25h[?0cwq[?25l[?1c"/boot/grub2/grub.cfg" 141L, 4299C written[?25h[?0c
+[root@localhost ~]# mkinitrd -f -f[Kv /boot/initramfs-$(um[Kname -r).m[Kimg $(unma[K[Kame -r)
+Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-957.el7.x86_64.img 3.10.0-957.el7.x86_64
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating microcode section ***
+*** Created microcode section ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-957.el7.x86_64.img' done ***
+[root@localhost ~]# exit
+exit
+
+Скрипт выполнен Пн 04 мар 2019 13:13:02
+Скрипт запущен Пн 04 мар 2019 13:56:40
+[root@localhost ~]# exit
+exit
+
+Скрипт выполнен Пн 04 мар 2019 13:56:42
+Скрипт запущен Пн 04 мар 2019 13:57:13
+[root@localhost ~]# vgs
+  VG       #PV #LV #SN Attr   VSize  VFree
+  OtusRoot   1   2   0 wz--n- <9,00g    0 
+[root@localhost ~]# mkdir /usr/lib/dracut/modules.d/01test
+[root@localhost ~]# yum install wget
+Загружены модули: fastestmirror
+Determining fastest mirrors
+Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was
+14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Неизвестная ошибка"
+
+
+ One of the configured repositories failed (Неизвестно),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot find a valid baseurl for repo: base/7/x86_64
+[root@localhost ~]# yum-confo[Kig-managet[Kr[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kap
+applygnupgdefaults  apropos             
+[root@localhost ~]# ap[K[Kyum [K-comfig [K[K[K[K[Kni[K[K[K[K[K[K[K[Kcurl http://www/rpmfind.net/linux/centos/7.6.1810/os/x86_64/ Packages/wget-1.14-18.el7.x86_64.rpm
+curl: (6) Could not resolve host: www; Неизвестная ошибка
+[root@localhost ~]# curl http://www/rpmfind.net/linux/centos/7.6.1810/os/x86_64/PPackages/wget-1.14-18.el7.x86_64.rpm[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crpmfind.net/linux/centos/7.6.1810/os/x86_64/Pa[1Pckages/wget-1.14-18.el7.x86_64.rpm[A.rpmfind.net/linux/centos/7.6.1810/os/x86_64/Packages/wget-1.14-18.el7.x86_64.rpm[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -O wget
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: www.rpmfind.net; Неизвестная ошибка
+curl: (6) Could not resolve host: wget; Неизвестная ошибка
+[root@localhost ~]# exit
+exit
+
+Скрипт выполнен Пн 04 мар 2019 14:04:24
+Скрипт запущен Пн 04 мар 2019 14:06:41
+[root@localhost ~]# touch module-setup.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch /usr/lib/dracut/modules.d/01test/module-setup.sh
+[root@localhost ~]# vi /usr/liba[Kdara[K[K[K[K/da[Kracut/modules.d/01test/module-setup.sh 
+[1;25r[?25h[?8c[?25h[?0c[27m[24m[0m[H[J[?25l[?1c[25;1H"/usr/lib/dracut/modules.d/01test/module-setup.sh" 0L, 0C[2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [1;1H[?25h[?0c[?25l[?1c[0m[25;1H[1m[37m[41mE348: No string under cursor[0m[25;29H[K[1;1H[?25h[?0c[?25l[?1c[25;1H[1m-- INSERT --[0m[25;13H[K[1;1H[?25h[?0c[?25l[?1c#[?25h[?0c[?25l[?1c![?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cb[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cb[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1c[2;1H[K[2;1H[?25h[?0c[?25l[?1c[3;1H[K[3;1H[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1ck[?25h[?0c[?25l[?1c([?25h[?0c[?25l[?1c)[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c{[?25h[?0c[?25l[?1c[4;1H[K[4;1H[?25h[?0c[?25l[?1c[8C[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c[4;10H[K[4;10H[?25h[?0c[?25l[?1c[4;9H[K[4;9H[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[1m[34m~                                                                               [3;10H[?25h[?0c[?25l[?1c[0m[4;1H[K[4;1H[?25h[?0c[?25l[?1c[8C[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c[5;1H[K[5;1H[?25h[?0c[?25l[?1c}[?25h[?0c[?25l[?1c[6;1H[K[6;1H[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cp[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1c([?25h[?0c[?25l[?1c)[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c{[?25h[?0c[?25l[?1c[7;1H[K[7;1H[?25h[?0c[?25l[?1c[8C[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c[8;1H[K[8;1H[?25h[?0c[?25l[?1c}[?25h[?0c[?25l[?1c[9;1H[K[9;1H[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c([?25h[?0c[?25l[?1c)[?25h[?0c[?25l[?1c[10;1H[K[10;1H[?25h[?0c[?25l[?1c[1m[34m~                                                                               [9;11H[?25h[?0c[?25l[?1c[0m [?25h[?0c[?25l[?1c{[?25h[?0c[?25l[?1c[10;1H[K[10;1H[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1ck[?25h[?0c[?25l[?1c[10;9H[K[10;9H[?25h[?0c[?25l[?1c[10;8H[K[10;8H[?25h[?0c[?25l[?1c[10;7H[K[10;7H[?25h[?0c[?25l[?1c[10;6H[K[10;6H[?25h[?0c[?25l[?1c[10;5H[K[10;5H[?25h[?0c[?25l[?1c[10;4H[K[10;4H[?25h[?0c[?25l[?1c[10;3H[K[10;3H[?25h[?0c[?25l[?1c[10;2H[K[10;2H[?25h[?0c[?25l[?1c[10;1H[K[10;1H[?25h[?0c[?25l[?1c[8C[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1c[10;14H[K[10;14H[?25h[?0c[?25l[?1c[10;13H[K[10;13H[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1ck[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1c[10;24H[K[10;24H[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1cp[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c"[?25h[?0c[?25l[?1c$[?25h[?0c[?25l[?1c{[?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1c}[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1c[11;1H[K[11;1H[?25h[?0c[?25l[?1c}[?25h[?0c[?25l[?1c[12;1H[K[12;1H[?25h[?0c[25;1H[K[12;1H[?25l[?1c[?25h[?0c[?25l[?1c[25;1H:[?25h[?0cwq[?25l[?1c"/usr/lib/dracut/modules.d/01test/module-setup.sh" 12L, 116C written[?25h[?0c
+[root@localhost ~]# vi /usr/lib/dracut/modules.d/01test/module-setup.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctouch /usr/lib/dracut/modules.d/01test/module-setup.sh[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktest.sh
+[root@localhost ~]# touch /usr/lib/dracut/modules.d/01test/test.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /usr/lib/dracut/modules.d/01test/module-setup.sh [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktest.sh
+[1;25r[?25h[?8c[?25h[?0c[27m[24m[0m[H[J[?25l[?1c[25;1H"/usr/lib/dracut/modules.d/01test/test.sh" 0L, 0C[2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [1;1H[?25h[?0c[?25l[?1c[0m[25;1H[1m-- INSERT --[0m[25;13H[K[1;1H[?25h[?0c[?25l[?1c#[?25h[?0c[?25l[?1c![?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cb[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cb[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1c[2;1H[K[2;1H[?25h[?0c[?25l[?1c[3;1H[K[3;1H[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cx[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c>[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cv[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1c[3;18H[K[3;18H[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c1[?25h[?0c[?25l[?1c,[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c[3;24H[K[3;24H[?25h[?0c[?25l[?1c[3;23H[K[3;23H[?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c>[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cv[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c2[?25h[?0c[?25l[?1c,[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c[3;40H[K[3;40H[?25h[?0c[?25l[?1c[3;39H[K[3;39H[?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c>[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cv[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c[4;1H[K[4;1H[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c'[?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1cg[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1c'[?25h[?0c[?25l[?1c[5;1H[K[5;1H[?25h[?0c[?25l[?1c[6;1H[K[6;1H[?25h[?0c[?25l[?1cH[?25h[?0c[?25l[?1cE[?25h[?0c[?25l[?1c[6;2H[K[6;2H[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1c![?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cy[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1c[6;10H[K[6;10H[?25h[?0c[?25l[?1c[6;9H[K[6;9H[?25h[?0c[?25l[?1c[6;8H[K[6;8H[?25h[?0c[?25l[?1cY[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1c[6;20H[K[6;20H[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c![?25h[?0c[?25l[?1c[7;1H[K[7;1H[?25h[?0c[?25l[?1c[8;1H[K[8;1H[?25h[?0c[?25l[?1c[25;1H[1m[37m[41mE29: No inserted text yet[0m
+[1m[32mPress ENTER or type command to continue[?25h[?0c[0m[1;1H[L[?25l[?1c[1;1H#!/bin/bash[25;1H[K[8;1H[?25h[?0c[?25l[?1c[25;1H[1m-- INSERT --[8;1H[?25h[?0c[?25l[?1c[0m_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c [16C_ [?25h[?0c_________________[?25l[?1c[9;1H[K[9;1H[?25h[?0c[?25l[?1c<[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cI[?25h[?0c[?25l[?1c'[?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1cr[?25h[?0c[?25l[?1ca[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c?[?25h[?0c[?25l[?1c[9;21H[K[9;21H[?25h[?0c[?25l[?1c>[?25h[?0c[?25l[?1c[10;1H[K[10;1H[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c[10;8H[K[10;8H[?25h[?0c[?25l[?1c[10;7H[K[10;7H[?25h[?0c[?25l[?1c[10;6H[K[10;6H[?25h[?0c[?25l[?1c[10;5H[K[10;5H[?25h[?0c[?25l[?1c[10;4H[K[10;4H[?25h[?0c[?25l[?1c[10;3H[K[10;3H[?25h[?0c[?25l[?1c[10;2H[K[10;2H[?25h[?0c[?25l[?1c[10;1H[K[10;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c[11;1H[K[11;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c[12;1H[K[12;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c[13;1H[K[13;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[25;1H[K[13;4H[?25h[?0c[?25l[?1c[25;1H[1m-- INSERT --[13;4H[?25h[?0c[?25l[?1c[0m[1m[34m^X[?25h[?0c[?25l[?1c[0m [13;5H[K[13;4H[?25h[?0c[1m[34m^[0m [?25l[?1c[1m[34m^?[?25h[?0c[?25l[?1c[0mi[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [13;5H[K[13;4H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c>[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c*[?25h[?0c[?25l[?1c-[?25h[?0c[?25l[?1c-[?25h[?0c[?25l[?1c*[?25h[?0c[?25l[?1c
+ [14;2H[K[14;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1cj[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1cj[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c
+ [15;2H[K[15;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c:[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c
+ [16;2H[K[16;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c //[?25h[?0c//[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c
+ [17;2H[K[17;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c[?25h[?0c[?25l[?1c([?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c|[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c)[?25h[?0c[?25l[?1c
+ [18;2H[K[18;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c'[?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c'[?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c
+ [19;2H[K[19;1H[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c\[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c)[?25h[?0c[?25l[?1c=[?25h[?0c[?25l[?1c([?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c_[?25h[?0c[?25l[?1c/[?25h[?0c[?25l[?1c
+ [20;2H[K[20;1H[?25h[?0c[?25l[?1cm[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1cg[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cd[?25h[?0c[?25l[?1c
+ [21;2H[K[21;1H[?25h[?0c[?25l[?1cs[?25h[?0c[?25l[?1cl[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cp[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c1[?25h[?0c[?25l[?1c0[?25h[?0c[?25l[?1c
+ [22;2H[K[22;1H[?25h[?0c[?25l[?1ce[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1ch[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c"[?25h[?0c[?25l[?1cc[?25h[?0c[?25l[?1co[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cf[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1ct[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cu[?25h[?0c[?25l[?1ci[?25h[?0c[?25l[?1cn[?25h[?0c[?25l[?1cg[?25h[?0c[?25l[?1c [?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c.[?25h[?0c[?25l[?1c"[?25h[?0c[?25l[?1c
+ [23;2H[K[23;1H[?25h[?0c[25;1H[K[23;1H[?25l[?1c[?25h[?0c[?25l[?1c
+
+:[?25h[?0cwq[?25l[?1c"/usr/lib/dracut/modules.d/01test/test.sh" 23L, 345C written[?25h[?0c
+[root@localhost ~]# mkinitrd -f -v /boot/initramfs-$(uname-r).m[Kimg $(uname[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -r)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdracut -f -v
+Executing: /sbin/dracut -f -v
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: test ***
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mСкрипт запущен Пн 04 мар 2019 14:34:52
+[root@localhost ~]# dracut -f -v
+Executing: /sbin/dracut -f -v
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: test ***
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 10: unexpected EOF while looking for matching `"'
+/usr/lib/dracut/modules.d/01test/module-setup.sh: line 13: syntax error: unexpected end of file
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating microcode section ***
+*** Created microcode section ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-957.el7.x86_64.img' done ***
+[root@localhost ~]# exit
+exit
+
+Скрипт выполнен Пн 04 мар 2019 14:41:53
